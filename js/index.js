@@ -1,4 +1,4 @@
-const n = parseFloat(prompt('Enter n'));
+const n = parseInt(prompt('Enter n'));
 
 let sol = calcNumArr(n);
 
