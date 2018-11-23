@@ -1,4 +1,4 @@
-const n = parseFloat(prompt('Enter number'));
+const n = parseFloat(prompt('Enter n'));
 
 let sol = calcNumArr(n);
 
@@ -35,19 +35,19 @@ function calcNumWhile(n) {
 
 function calcNumRec (n) {
     
-    let a=1, b=1, d=3;
+    let a=1, b=1, locn=3;
     let c= a + b;
     n++;
-    return calcNumRec2 (a, b, c, d, n);
+    return calcNumRec2 (a, b, c, locn, n);
 }
 
-function calcNumRec2 (a, b, c, d, n) {
-    for (d; d !== n; d) {
+function calcNumRec2 (a, b, c, locn, n) {
+    for (locn; locn !== n; locn) {
         c = a + b;
         a = b;
         b = c;
-        d++;
-        calcNumRec2(a, b, c, d, n);
+        locn++;
+        calcNumRec2(a, b, c, locn, n);
     }
     return c;
 }
